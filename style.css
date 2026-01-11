@@ -1,265 +1,172 @@
-/* Основные настройки */
+/* === ACADEMIC THEME SETTINGS === */
 :root {
-    --bg-color: #1d1d1d;
-    --card-bg: #252526;
-    --text-color: #e0e0e0;
-    --accent-color: #ffc107;
-    --gray-text: #888;
+    --bg-color: #ffffff;
+    --sidebar-bg: #f8f9fa;
+    --text-primary: #111111;
+    --text-secondary: #555555;
+    --accent-color: #0a2540;
+    --tag-bg: #eef0f2;
+    --border-line: #e0e0e0;
+    --font-serif: 'Merriweather', serif;
+    --font-sans: 'Inter', sans-serif;
+    --sidebar-width: 320px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background-color: var(--bg-color); color: var(--text-primary); font-family: var(--font-sans); line-height: 1.6; }
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    display: flex;
+/* LAYOUT */
+.sidebar-fixed { position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; background-color: var(--sidebar-bg); border-right: 1px solid var(--border-line); padding: 60px 40px; overflow-y: auto; z-index: 10; }
+.main-scrollable { margin-left: var(--sidebar-width); padding: 60px 80px; min-height: 100vh; }
+
+/* PROFILE */
+.profile-image img { 
+    width: 140px; height: 140px; border-radius: 50%; margin-bottom: 25px; 
+    object-fit: cover; 
+    border: 3px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+    transition: filter 0.3s; 
+}
+.profile-info h1 { font-family: var(--font-serif); font-size: 24px; line-height: 1.2; margin-bottom: 10px; font-weight: 900; color: var(--text-primary); }
+.location { color: var(--text-secondary); font-size: 14px; font-family: var(--font-sans); margin-bottom: 20px; }
+.separator { height: 2px; background: var(--accent-color); width: 40px; margin: 25px 0; }
+.social-links { display: flex; flex-direction: column; gap: 15px; }
+.social-links a { color: var(--text-primary); font-size: 15px; text-decoration: none; display: flex; align-items: center; width: fit-content; transition: color 0.2s; font-weight: 500; }
+.social-links a:hover { color: var(--accent-color); }
+.social-links a i { width: 24px; margin-right: 10px; font-size: 20px; color: var(--text-secondary); }
+
+/* --- НОВАЯ КНОПКА SIDEBAR CV --- */
+.btn-sidebar-cv {
+    background-color: var(--accent-color);
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-align: center;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 40px 20px;
-}
-
-.container {
-    display: flex;
-    max-width: 1000px;
-    width: 100%;
-    gap: 50px;
-    align-items: flex-start;
-}
-
-/* --- Профиль --- */
-.profile-card {
-    width: 300px;
-    flex-shrink: 0;
-    text-align: center;
-    position: sticky;
-    top: 40px;
-}
-
-.profile-image img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-
-.profile-info h1 {
-    font-size: 26px;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.subtitle {
-    font-size: 16px;
-    color: var(--gray-text);
-    margin-bottom: 12px;
-}
-
-.location {
-    color: var(--gray-text);
-    font-size: 14px;
-    margin-bottom: 25px;
-}
-
-.social-links a {
-    color: var(--text-color);
-    font-size: 22px;
-    margin: 0 12px;
-    transition: color 0.3s;
-    text-decoration: none;
-}
-
-.social-links a:hover {
-    color: var(--accent-color);
-}
-
-.footer {
-    margin-top: 40px;
-    font-size: 12px;
-    color: var(--gray-text);
-}
-
-/* --- Контент --- */
-.content-area {
-    flex: 1;
-}
-
-/* Меню */
-.menu ul {
-    list-style: none;
-    margin-bottom: 40px;
-}
-
-.menu-item {
-    font-size: 20px;
-    margin-bottom: 18px;
-    cursor: pointer;
-    color: var(--text-color);
-    transition: color 0.3s;
-    display: block;
-}
-
-.menu-item i {
-    margin-right: 12px;
-    width: 25px;
-    text-align: center;
-    color: var(--gray-text);
-    transition: color 0.3s;
-}
-
-.menu-item:hover, 
-.menu-item:hover i {
-    color: var(--accent-color);
-}
-
-.menu-item.active {
-    color: var(--accent-color);
-    font-weight: bold;
-}
-
-.menu-item.active i {
-    color: var(--accent-color);
-}
-
-/* Секции */
-.section {
-    display: none;
-    animation: fadeIn 0.4s ease;
-}
-
-.section.active-section {
-    display: block;
-}
-
-.section h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: var(--accent-color);
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
-}
-
-.section p {
-    line-height: 1.6;
-    color: #ccc;
-}
-
-/* Карточки работ */
-.job {
-    margin-bottom: 35px;
-    position: relative;
-    padding-left: 20px;
-    border-left: 2px solid var(--accent-color);
-}
-
-.job h3 {
-    font-size: 20px;
-    margin-bottom: 5px;
-    color: #fff;
-}
-
-.job .date {
-    display: block;
-    font-size: 13px;
-    color: var(--gray-text);
     margin-bottom: 10px;
-    font-style: italic;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+.btn-sidebar-cv:hover {
+    background-color: #1a3a5a;
+    transform: translateY(-2px);
+    color: #fff !important;
+}
+/* ------------------------------- */
+
+.sidebar-footer { margin-top: 60px; font-size: 12px; color: #999; }
+
+/* MENU */
+.academic-menu { display: flex; gap: 35px; margin-bottom: 60px; border-bottom: 1px solid var(--border-line); padding-bottom: 15px; background: rgba(255, 255, 255, 0.95); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(5px); padding-top: 20px; }
+.menu-link { text-decoration: none; font-family: var(--font-sans); font-size: 16px; font-weight: 500; color: var(--text-secondary); position: relative; transition: color 0.3s; }
+.menu-link:hover { color: var(--text-primary); }
+.menu-link.active { color: var(--accent-color); font-weight: 700; }
+.menu-link.active::after { content: ''; position: absolute; bottom: -16px; left: 0; width: 100%; height: 3px; background: var(--accent-color); }
+
+/* CONTENT */
+.scroll-section { margin-bottom: 100px; scroll-margin-top: 100px; }
+.section-header h2 { font-family: var(--font-serif); font-size: 32px; margin-bottom: 40px; font-weight: 700; color: var(--text-primary); }
+
+/* --- JOB ENTRIES --- */
+.job-entry { margin-bottom: 40px; }
+.job-entry:not(.expandable-job) { display: flex; gap: 25px; align-items: flex-start; }
+
+/* Expandable Experience */
+.expandable-job { background: #fff; border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 20px; }
+.job-header-row { display: flex; align-items: center; gap: 20px; cursor: pointer; padding: 10px 0; transition: background 0.2s; }
+.job-header-row:hover { opacity: 0.8; }
+.job-icon-container { flex-shrink: 0; width: 55px; height: 55px; background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; display: flex; justify-content: center; align-items: center; font-size: 24px; color: var(--accent-color); box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+.job-main-info { flex: 1; }
+.job-main-info h3 { font-family: var(--font-sans); font-size: 19px; font-weight: 700; color: var(--text-primary); margin-bottom: 2px; }
+.job-main-info .date { font-size: 13px; color: #999; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; display: block; }
+.toggle-btn { font-size: 13px; font-weight: 600; color: var(--accent-color); display: flex; align-items: center; gap: 5px; }
+.toggle-btn i { transition: transform 0.3s; }
+.expandable-job.open .toggle-btn i { transform: rotate(180deg); }
+.job-details-hidden { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out; padding-left: 75px; }
+.expandable-job.open .job-details-hidden { max-height: 1200px; margin-top: 15px; }
+.job-content { flex: 1; }
+
+/* Companies & Links */
+.company { font-family: var(--font-serif); font-style: italic; color: var(--text-secondary); font-size: 16px; display: block; margin-bottom: 5px; }
+.company-link { font-family: var(--font-serif); font-style: italic; color: var(--text-secondary); font-size: 16px; display: block; margin-bottom: 2px; text-decoration: none; width: fit-content; transition: color 0.2s; }
+.company-link:hover { color: var(--accent-color); text-decoration: underline; }
+.company-link i { font-size: 11px; margin-left: 4px; opacity: 0.7; }
+.institution-link { text-decoration: none; color: inherit; border-bottom: 1px solid transparent; transition: 0.2s; }
+.institution-link:hover { color: var(--accent-color); border-bottom-color: var(--accent-color); }
+
+.job-desc { font-size: 16px; color: #333; line-height: 1.7; }
+.tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+.tech-stack span { background-color: var(--tag-bg); color: var(--text-secondary); font-size: 13px; padding: 5px 12px; border-radius: 6px; font-family: var(--font-sans); font-weight: 500; }
+
+/* MEDIA & IMAGES */
+.project-media { margin-top: 25px; margin-bottom: 25px; }
+.media-label { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; color: var(--accent-color); margin-bottom: 8px; border-bottom: 2px solid var(--accent-color); padding-bottom: 2px; }
+.video-wrapper, .image-wrapper { position: relative; width: 100%; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 4px 15px rgba(0,0,0,0.05); overflow: hidden; }
+.video-wrapper { padding-bottom: 56.25%; height: 0; background: #000; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.image-wrapper img { width: 100%; height: auto; display: block; }
+.media-caption { display: block; margin-top: 8px; font-size: 13px; color: var(--text-secondary); font-family: var(--font-sans); text-align: center; font-style: italic; }
+
+/* BUTTONS */
+.btn-download, .btn-contact { 
+    display: inline-flex; align-items: center; gap: 10px; 
+    background-color: var(--accent-color); 
+    color: #fff; padding: 10px 20px; border-radius: 6px; 
+    text-decoration: none; font-size: 13px; font-weight: 600; 
+    transition: 0.2s; margin-top: 10px; border: 1px solid transparent; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
+.btn-download:hover, .btn-contact:hover { 
+    background-color: #1a3a5a; 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
 }
 
-.job ul {
-    margin-top: 10px;
-    margin-left: 20px;
-    color: #ccc;
-}
+.btn-small-link { display: inline-flex; align-items: center; gap: 5px; margin-top: 6px; font-size: 12px; color: var(--accent-color); background: #eef0f2; padding: 4px 10px; border-radius: 20px; text-decoration: none; font-weight: 600; transition: 0.2s; }
+.btn-small-link:hover { background: var(--accent-color); color: #fff; }
 
-.job ul li {
-    margin-bottom: 8px;
-    line-height: 1.5;
-}
+.btn-website { display: inline-flex; align-items: center; gap: 8px; background-color: #fff; color: var(--text-primary); padding: 10px 20px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.2s ease; border: 1px solid #e0e0e0; }
+.btn-website:hover { background-color: #f5f5f5; border-color: #ccc; color: var(--accent-color); }
 
-/* Навыки */
-.skills-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-}
+/* HONORS */
+.academic-list { list-style: none; margin-top: 30px; }
+.academic-list li { padding: 18px 25px; border-bottom: 1px solid #eee; font-size: 16px; display: flex; flex-direction: column; gap: 10px; background: #fff; border-radius: 8px; transition: all 0.3s ease; margin-bottom: 10px; }
+.academic-list li:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.06); transform: translateY(-3px); border-left: 4px solid var(--accent-color); }
+.academic-list li:not(.expandable-item) { flex-direction: row; align-items: flex-start; gap: 20px; }
 
-.skills-tags span {
-    background-color: rgba(255, 193, 7, 0.1);
-    color: var(--accent-color);
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    border: 1px solid var(--accent-color);
-}
+/* Expandable Honor */
+.expandable-item { cursor: pointer; border-left: 4px solid transparent; }
+.expandable-item:hover { background-color: #fcfcfc; border-left-color: var(--accent-color); }
+.honor-header-row { display: flex; align-items: flex-start; gap: 15px; width: 100%; }
+.honor-text { flex: 1; text-align: left; }
+.toggle-icon { color: #ccc; transition: transform 0.3s; margin-top: 5px; margin-left: 10px; }
+.expandable-item.open .toggle-icon { transform: rotate(180deg); color: var(--accent-color); }
+.honor-content-hidden { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out; opacity: 0; padding-left: 44px; }
+.expandable-item.open .honor-content-hidden { max-height: 2000px; opacity: 1; margin-top: 15px; }
 
-/* --- Стили для наград (Grid) --- */
-.honors-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
-}
+/* Paper Preview */
+.paper-preview { background: #f8f9fa; padding: 25px; border-radius: 8px; border: 1px solid #e0e0e0; }
+.paper-preview h4 { font-family: var(--font-serif); font-size: 18px; margin-bottom: 10px; color: var(--text-primary); }
+.paper-section h5 { font-size: 14px; font-weight: 700; color: var(--accent-color); margin-bottom: 5px; text-transform: uppercase; }
+.paper-section p { font-size: 14px; color: #444; line-height: 1.6; }
 
-.honor-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-}
+.honor-icon { margin-top: 3px; font-size: 20px; width: 24px; text-align: center; flex-shrink: 0; }
+.honor-sub { display: block; font-size: 14px; color: #666; margin-top: 5px; }
+.honor-icon.gold { color: #d4af37; }
+.honor-icon.eu-blue { color: #003399; }
+.honor-icon.bronze { color: #cd7f32; }
+.honor-icon.academic { color: #a51c30; }
+.honor-icon.tech { color: #0077b5; }
 
-.honor-icon {
-    font-size: 24px;
-    width: 30px;
-    text-align: center;
-    line-height: 1.2;
-    flex-shrink: 0;
-}
-
-.honor-details {
-    flex: 1;
-    font-size: 16px;
-    color: var(--text-color);
-    line-height: 1.4;
-}
-
-.honor-details strong {
-    color: var(--accent-color);
-}
-
-.honor-desc {
-    display: block;
-    margin-top: 5px;
-    font-size: 14px;
-    color: var(--gray-text);
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .profile-card {
-        width: 100%;
-        position: static;
-        margin-bottom: 30px;
-    }
-    .menu ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: center;
-    }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+/* FOOTER & MOBILE */
+.main-footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--border-line); text-align: center; color: var(--text-secondary); font-family: var(--font-serif); font-size: 14px; }
+@media (max-width: 900px) {
+    .sidebar-fixed { position: static; width: 100%; height: auto; border-right: none; border-bottom: 1px solid var(--border-line); padding: 40px 20px; text-align: center; }
+    .profile-image img { margin: 0 auto 20px auto; }
+    .social-links { align-items: center; }
+    .main-scrollable { margin-left: 0; padding: 30px 20px; }
+    .academic-menu { overflow-x: auto; white-space: nowrap; top: 0; margin-left: -20px; margin-right: -20px; padding-left: 20px; }
+    .job-entry { flex-direction: column; gap: 15px; }
+    .honor-content-hidden { padding-left: 0; }
+    .job-details-hidden { padding-left: 0; }
 }
