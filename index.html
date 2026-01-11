@@ -1,244 +1,492 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-89MVP4P3LQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-89MVP4P3LQ');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-89MVP4P3LQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-89MVP4P3LQ');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isgandar Yusifov | Portfolio</title>
+    <title>Isgandar Yusifov | Research & Engineering</title>
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-89MVP4P3LQ"></script>
-
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
-        <aside class="profile-card">
+    <aside class="sidebar-fixed">
+        <div class="profile-content">
             <div class="profile-image">
-                <img src="avatar.jpg" alt="Isgandar Yusifov">
+                <img src="avatar.jpeg" alt="Isgandar Yusifov">
             </div>
+            
             <div class="profile-info">
                 <h1>Isgandar Yusifov</h1>
-                <p class="subtitle">16 y.o. Innovator | Bio-Engineer</p>
-                <p class="location"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</p>
+                <p class="location"><i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i> Baku, Azerbaijan</p>
                 
+                <div class="separator"></div>
+
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/isgandaryusifov" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="mailto:yusifov.isgandar09@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="resume&cv.pdf" download="Isgandar_Yusifov_CV.pdf" class="btn-sidebar-cv">
+                        <i class="fas fa-file-download"></i> Download CV
+                    </a>
+
+                    <a href="https://www.youtube.com/channel/UCzwhAbbma3rxVXQo23HiGNg" target="_blank">
+                        <i class="fab fa-youtube"></i> YouTube
+                    </a>
+                    <a href="https://www.linkedin.com/in/isgandaryusifov" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="mailto:yusifov.isgandar09@gmail.com">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
                 </div>
             </div>
-            <div class="footer">
-                <p>© 2025 Isgandar Yusifov</p>
-            </div>
-        </aside>
-
-        <main class="content-area">
             
-            <nav class="menu">
-                <ul>
-                    <li class="menu-item active" data-target="about">
-                        <i class="far fa-user"></i> About Me
-                    </li>
-                    <li class="menu-item" data-target="experiences">
-                        <i class="fas fa-briefcase"></i> Experiences
-                    </li>
-                    <li class="menu-item" data-target="projects">
-                        <i class="fas fa-code-branch"></i> Projects & Research
-                    </li>
-                    <li class="menu-item" data-target="education">
-                        <i class="fas fa-graduation-cap"></i> Education & Honors
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="content-sections">
-                
-                <div id="about" class="section active-section">
-                    <h2>About Me</h2>
-                    <p>
-                        I believe the danger isn't that AI will disobey us, but that it will obey our flaws too perfectly. 
-                        My work - from engineering <strong>"digital masks"</strong> for marginalized Roma youth to preserving UNESCO heritage sites - is driven by 
-                        <strong>"algorithmic courage"</strong>: the will to build systems that protect history and reject stereotypes.
-                    </p>
-                    <br>
-                    <p>
-                        Growing up near the Baku railway, I developed <strong>"industrial-grade" focus</strong> and a respect for invisible labor. 
-                        I am a systems thinker who enters projects not just with action, but with understanding.
-                    </p>
-                    <br>
-                    <p style="font-style: italic; color: #888; font-size: 14px;">
-                        Fun fact: I am a real-life "Waldo" - I somehow accidentally appear in the background of strangers' photos constantly.
-                    </p>
-                    <br>
-                    <div class="skills-tags">
-                        <span>Full-Stack Development</span>
-                        <span>Bio-Engineering</span>
-                        <span>AI Ethics</span>
-                        <span>System Architecture</span>
-                        <span>3D Modeling</span>
-                        <span>People Management</span>
-                    </div>
-                </div>
-
-                <div id="experiences" class="section">
-                    <h2>Experiences</h2>
-                    
-                    <div class="job">
-                        <h3>Bio-Prosthetics Project Lead</h3>
-                        <span class="date">AFRY AB | March 2024 - Present</span>
-                        <p>First student ever employed by AFRY AB. Pioneered the bio-prosthetics initiative.</p>
-                        <ul>
-                            <li><strong>Global Impact:</strong> Successfully deployed over 100 custom 3D-modeled devices across three continents, restoring flight capabilities to wildlife.</li>
-                            <li><strong>Innovation:</strong> Integrated biological understanding with engineering constraints to create functional prosthetics.</li>
-                            <li><strong>Operations:</strong> Managed production and anticipated supply chain challenges to ensure efficient distribution.</li>
-                        </ul>
-                    </div>
-
-                    <div class="job">
-                        <h3>Community-Led Development</h3>
-                        <span class="date">Hypixel Studios (Hytale) | March 2024 - Present</span>
-                        <p>Contributing to the development ecosystem of Hytale.</p>
-                        <ul>
-                            <li>Leveraging game engines and community feedback to shape development tools.</li>
-                            <li>Focus on people management and social engagement within the developer community.</li>
-                        </ul>
-                    </div>
-
-                    <div class="job">
-                        <h3>Founder & Lead Architect</h3>
-                        <span class="date">Yankee Baku | 2024 - Present</span>
-                        <p>Civic-tech platform bridging cultural gaps for expats.</p>
-                        <ul>
-                            <li>Engineered a full-stack platform recognized by the U.S. Embassy for social innovation impact.</li>
-                            <li>Helping foreigners adapt to life in Azerbaijan.</li>
-                        </ul>
-                    </div>
-
-                    <div class="job">
-                        <h3>Team Lead, Digital Heritage</h3>
-                        <span class="date">UNESCO World Heritage Site (Baku Old City)</span>
-                        <p>Led a team mapping the UNESCO Old City into a 3D simulation used by COP29 guests.</p>
-                    </div>
-                </div>
-
-                <div id="projects" class="section">
-                    <h2>Projects & Research</h2>
-
-                    <div class="job">
-                        <h3>Founder & Curriculum Architect</h3>
-                        <span class="date">Roma Civic Reintegration Project | 2024 - Present</span>
-                        <p>EU-awarded initiative empowering marginalized youth.</p>
-                        <ul>
-                            <li>Architected the "Digital Mask" curriculum.</li>
-                            <li>Enabled 100+ Roma youth to earn ~$15,000 in freelance revenue based purely on technical merit.</li>
-                        </ul>
-                    </div>
-
-                    <div class="job">
-                        <h3>AI Integrity & Alignment Research</h3>
-                        <p><strong>Founder & Lead AI Engineer.</strong> Focused on Google, OpenAI & LLMs.</p>
-                        <ul>
-                            <li>Engineered semantically neutral prompts achieving 93% success in inducing leading LLMs to generate fabricated information (hallucinations).</li>
-                        </ul>
-                    </div>
-
-                    <div class="job">
-                        <h3>"The Avengers" Cyber-Defense Initiative</h3>
-                        <p><strong>Founder (Since Grade 5).</strong> Cybersecurity Operations.</p>
-                        <ul>
-                            <li>Fortified 10k+ users on Discord & FunPay against phishing syndicates.</li>
-                            <li>Prevented over $300k in potential financial loss.</li>
-                        </ul>
-                    </div>
-
-                    <div class="job">
-                        <h3>Computational Ethnography</h3>
-                        <p><strong>Azerbaijan National Carpet Museum.</strong></p>
-                        <ul>
-                            <li>Used calculus to derive the exact function of carpet patterns.</li>
-                            <li>Generated 100+ mathematically unique designs through heritage research.</li>
-                        </ul>
-                    </div>
-
-                    <div class="job">
-                        <h3>Eco-Code & Zakatala National Park</h3>
-                        <p><strong>Eco Ambassador.</strong></p>
-                        <ul>
-                            <li>Deployed AI & geotagging to track nesting sites, increasing European eagle population by 25%.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div id="education" class="section">
-                    <h2>Education</h2>
-                    <div class="job">
-                        <h3>Baku City Lyceum 132-134</h3>
-                        <span class="date">Class of 2026</span>
-                        <p>High School Diploma, Computer Science and Mathematics.</p>
-                        <p><strong>GPA:</strong> 5/5 Weighted</p>
-                        <p><strong>SAT:</strong> 1450 (Math: 800)</p>
-                        <p><strong>IELTS:</strong> 7.0</p>
-                    </div>
-
-                    <h2>Honors & Awards</h2>
-                    
-                    <div class="honors-list">
-                        
-                        <div class="honor-row">
-                            <div class="honor-icon">🇪🇺</div>
-                            <div class="honor-details">
-                                <strong>Winner, Roma Youth Project Award 2025</strong> (European Commission)<br>
-                                <span class="honor-desc">Awarded €5,000 prize for the "Digital Mask" curriculum.</span>
-                            </div>
-                        </div>
-
-                        <div class="honor-row">
-                            <div class="honor-icon">🏆</div>
-                            <div class="honor-details">
-                                <strong>Two-Time Third Place & Finalist</strong>, National Informatics Olympiad (NIO)
-                            </div>
-                        </div>
-
-                        <div class="honor-row">
-                            <div class="honor-icon">🥇</div>
-                            <div class="honor-details">
-                                <strong>1st Place</strong>, National Robotics Olympiad (Sumo) - Teknofest
-                            </div>
-                        </div>
-
-                        <div class="honor-row">
-                            <div class="honor-icon">🎖️</div>
-                            <div class="honor-details">
-                                <strong>U.S. Embassy Recognition for Digital Innovation</strong>
-                            </div>
-                        </div>
-
-                        <div class="honor-row">
-                            <div class="honor-icon">🌍</div>
-                            <div class="honor-details">
-                                <strong>International Award Winner</strong> - Bridging The Future (Georgia Embassy)
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
+            <div class="sidebar-footer">
+                <p>© 2025 I. Yusifov</p>
             </div>
-        </main>
-    </div>
+        </div>
+    </aside>
+
+    <main class="main-scrollable">
+        
+        <nav class="academic-menu sticky-menu">
+            <a href="#experiences" class="menu-link active">Experiences</a>
+            <a href="#projects" class="menu-link">Projects</a>
+            <a href="#education" class="menu-link">Education</a>
+        </nav>
+
+        <div class="content-wrapper">
+            
+            <section id="experiences" class="scroll-section">
+                <div class="section-header">
+                    <h2>Professional Experience</h2>
+                </div>
+                
+                <div class="job-entry expandable-job">
+                    <div class="job-header-row">
+                        <div class="job-icon-container"><i class="fas fa-hand-holding-medical"></i></div>
+                        <div class="job-main-info">
+                            <h3>Lead Inventor & Bio-Engineer</h3>
+                            <a href="https://afry.com/en" target="_blank" class="company-link">AFRY AB ↗</a>
+                            <span class="date">Mar 2024 - Present</span>
+                        </div>
+                        <div class="toggle-btn">More <i class="fas fa-chevron-down"></i></div>
+                    </div>
+
+                    <div class="job-details-hidden">
+                        <div class="job-desc">
+                            <p class="summary">First student ever approved as an innovator by AFRY AB. Pioneered the bio-prosthetics initiative.</p>
+                            <ul>
+                                <li><strong>Global Impact:</strong> Successfully deployed over <strong>100 custom 3D-modeled devices</strong> across 3 continents.</li>
+                                <li><strong>Engineering:</strong> Integrated biological mechanics with engineering constraints to design functional prosthetics.</li>
+                            </ul>
+                            
+                            <div class="job-actions" style="margin-top: 20px; margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="mailto:yusifov.isgandar09@gmail.com?subject=Inquiry%20about%20Prosthetic%20Materials" class="btn-contact">
+                                    <i class="fas fa-envelope-open-text"></i> Inquire About Materials
+                                </a>
+                                <a href="https://afry.com/en" target="_blank" class="btn-website">
+                                    <i class="fas fa-globe"></i> Visit Official Site
+                                </a>
+                            </div>
+
+                            <div class="project-media">
+                                <span class="media-label">PROSTHETICS</span>
+                                <div class="image-wrapper">
+                                    <img src="" alt="Prosthetics Prototype" style="background-color: #eee; min-height: 200px; width: 100%; height: auto;">
+                                </div>
+                            </div>
+
+                            <div class="tech-stack">
+                                <span>Bio-Engineering</span>
+                                <span>Fusion 360</span>
+                                <span>R&D</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-entry expandable-job">
+                    <div class="job-header-row">
+                        <div class="job-icon-container"><i class="fas fa-gamepad"></i></div>
+                        <div class="job-main-info">
+                            <h3>Community-Led Development Lead</h3>
+                            <a href="https://hytale.com/" target="_blank" class="company-link">Hypixel Studios (Hytale) ↗</a>
+                            <span class="date">Mar 2024 - Present</span>
+                        </div>
+                        <div class="toggle-btn">More <i class="fas fa-chevron-down"></i></div>
+                    </div>
+
+                    <div class="job-details-hidden">
+                        <div class="job-desc">
+                            <p>Strategic leadership role within the production team. Managed engagement across a <strong>multi-million user community</strong>.</p>
+                            <ul>
+                                <li>Acted as the primary bridge between players and developers.</li>
+                                <li>Converted raw user feedback into actionable technical insights that <strong>reshaped core game mechanics</strong>.</li>
+                            </ul>
+
+                            <div class="project-media">
+                                <span class="media-label">HYTALE</span>
+                                <div class="image-wrapper">
+                                    <img src="image_31138a.jpg" alt="Hytale Community Work" style="width: 100%; height: auto; display: block;">
+                                </div>
+                            </div>
+
+                            <div class="tech-stack">
+                                <span>Product Management</span>
+                                <span>Data Analysis</span>
+                                <span>Community Leadership</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-entry expandable-job">
+                    <div class="job-header-row">
+                        <div class="job-icon-container"><i class="fas fa-leaf"></i></div>
+                        <div class="job-main-info">
+                            <h3>Lead Computational Ecologist</h3>
+                            <span class="company">Ministry of Ecology (Zakatala Park)</span>
+                            <span class="date">Sep 2023 - Present</span>
+                        </div>
+                        <div class="toggle-btn">More <i class="fas fa-chevron-down"></i></div>
+                    </div>
+
+                    <div class="job-details-hidden">
+                        <div class="job-desc">
+                            <p>Designed and deployed ML models and geotagging systems to monitor eagle nesting sites.</p>
+                            <ul>
+                                <li><strong>Conservation Results:</strong> Optimized ranger patrol routes, driving a park-verified <strong>25% surge</strong> in the European eagle population.</li>
+                            </ul>
+
+                            <div class="project-media">
+                                <span class="media-label">ECOLOGY</span>
+                                <div class="image-wrapper">
+                                    <img src="eagles.png" alt="Eagle Tracking System" style="width: 100%; height: auto; display: block;">
+                                </div>
+                            </div>
+
+                            <div class="tech-stack">
+                                <span>Machine Learning</span>
+                                <span>Computer Vision</span>
+                                <span>Geotagging</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-entry expandable-job">
+                    <div class="job-header-row">
+                        <div class="job-icon-container"><i class="fas fa-city"></i></div>
+                        <div class="job-main-info">
+                            <h3>Founder & Lead Architect</h3>
+                            <span class="company">Yankee Baku</span>
+                            <span class="date">2024 - Present</span>
+                        </div>
+                        <div class="toggle-btn">More <i class="fas fa-chevron-down"></i></div>
+                    </div>
+
+                    <div class="job-details-hidden">
+                        <div class="job-desc">
+                            <p>Full-stack anti-fraud platform honored by the <strong>U.S. Embassy</strong> for civic leadership.</p>
+                            <ul>
+                                <li><strong>Economic Impact:</strong> Prevented an estimated <strong>$100,000</strong> in financial losses for expats by exposing fraudulent pricing schemes.</li>
+                            </ul>
+
+                            <div class="project-media">
+                                <span class="media-label">YANKEE</span>
+                                <div class="image-wrapper">
+                                    <img src="" alt="Yankee Baku App" style="background-color: #eee; min-height: 200px; width: 100%; height: auto;">
+                                </div>
+                            </div>
+
+                            <div class="tech-stack">
+                                <span>Full-Stack Development</span>
+                                <span>React/Node.js</span>
+                                <span>Civic Tech</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-entry expandable-job">
+                    <div class="job-header-row">
+                        <div class="job-icon-container"><i class="fas fa-landmark"></i></div>
+                        <div class="job-main-info">
+                            <h3>Team Lead, Digital Heritage</h3>
+                            <span class="company">UNESCO World Heritage Site</span>
+                        </div>
+                        <div class="toggle-btn">More <i class="fas fa-chevron-down"></i></div>
+                    </div>
+
+                    <div class="job-details-hidden">
+                        <div class="job-desc">
+                            <p>Led a student team mapping the UNESCO Old City into a 3D simulation used by COP29 guests.</p>
+                            
+                            <div class="project-media">
+                                <span class="media-label">3D Simulation Walkthrough</span>
+                                <div class="video-wrapper">
+                                    <iframe src="" style="background-color: #eee;" title="UNESCO Demo Placeholder"></iframe>
+                                </div>
+                                <span class="media-caption">Virtual tour of the Old City (Video coming soon).</span>
+                            </div>
+
+                            <div class="project-media">
+                                <span class="media-label">COP29 Exhibition</span>
+                                <div class="image-wrapper">
+                                    <img src="cop29.jpg" alt="3D Map of Old City" style="width: 100%; height: auto; display: block;">
+                                </div>
+                            </div>
+
+                            <div class="tech-stack">
+                                <span>3D Simulation</span>
+                                <span>Digital Heritage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="scroll-section">
+                <div class="section-header">
+                    <h2>Projects & Research</h2>
+                </div>
+
+                <div class="job-entry" id="robotics-project">
+                    <div class="job-icon-container"><i class="fas fa-robot"></i></div>
+                    <div class="job-content">
+                        <div class="job-meta">
+                            <h3>Autonomous Robotics (Sumo)</h3>
+                            <span class="company">National Robotics Olympiad</span>
+                        </div>
+                        <div class="job-desc">
+                            <p>Engineered a high-performance autonomous Sumo robot using C++ and Arduino. Designed a custom chassis in Fusion 360 to optimize center of gravity and traction. Implemented complex edge-detection algorithms and IR sensor arrays for precise enemy tracking, resulting in a flawless performance that secured <strong>1st Place</strong> at Teknofest.</p>
+                            
+                            <div class="project-media">
+                                <span class="media-label">Project Demo</span>
+                                <div class="video-wrapper">
+                                    <iframe src="https://www.youtube.com/embed/6qTsZ3tVf6U" title="Robotics Demo" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                <span class="media-caption">Figure 1: Autonomous navigation test (Teknofest).</span>
+                            </div>
+
+                            <div class="tech-stack">
+                                <span>C++ / Arduino</span>
+                                <span>Mechanical Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-entry">
+                    <div class="job-icon-container"><i class="fas fa-brain"></i></div>
+                    <div class="job-content">
+                        <div class="job-meta">
+                            <h3>AI Integrity & Alignment Research</h3>
+                            <span class="company">Independent Research</span>
+                        </div>
+                        <div class="job-desc">
+                            <p>Conducted extensive adversarial testing on state-of-the-art LLMs (GPT-4, Gemini, Claude). Engineered "semantically neutral" prompt injection attacks that bypassed safety filters with a <strong>93% success rate</strong>. Documented systemic alignment failures and "hallucination loops," producing a research paper recognized as publication-quality (Grade: 99/100).</p>
+                            <div class="tech-stack">
+                                <span>LLM Alignment</span>
+                                <span>Adversarial Testing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="job-entry">
+                    <div class="job-icon-container"><i class="fas fa-users"></i></div>
+                    <div class="job-content">
+                        <div class="job-meta">
+                            <h3>Roma Civic Reintegration Project</h3>
+                            <span class="company">EU-Awarded Initiative</span>
+                        </div>
+                        <div class="job-desc">
+                            <p>Founded a social impact initiative to combat algorithmic bias against the Roma community. Developed the <strong>"Digital Mask"</strong> protocol to anonymize ethnic markers in job applications, helping marginalized youth bypass bias.</p>
+                            <ul>
+                                <li><strong>Impact:</strong> Conducted fieldwork with <strong>1,200 participants</strong> to test algorithmic fairness.</li>
+                                <li><strong>Results:</strong> Mentored 100+ students in AI tools, enabling the community to generate over <strong>$15,000</strong> in independent revenue through remote work.</li>
+                            </ul>
+                            
+                            <a href="#eu-award-item" class="btn-small-link">
+                                <i class="fas fa-trophy"></i> View EU Award
+                            </a>
+
+                            <div class="tech-stack" style="margin-top: 15px;">
+                                <span>Algorithmic Bias</span>
+                                <span>Social Impact</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education" class="scroll-section">
+                <div class="section-header">
+                    <h2>Education & Honors</h2>
+                </div>
+                
+                <div class="job-entry">
+                    <div class="job-icon-container">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="job-content">
+                        <div class="job-meta">
+                            <h3>
+                                <a href="https://132-134.edu.az/" target="_blank" class="institution-link">
+                                    Baku City Lyceum 132-134 (UNESCO Associated School)
+                                </a>
+                            </h3>
+                            <span class="company">Class of 2026</span>
+                        </div>
+                        <div class="job-desc">
+                            <p>High School Diploma, Computer Science and Mathematics.</p>
+                            <p><strong>Stats:</strong> GPA 5.0/5.0, SAT 1450, IELTS 7.0.</p>
+
+                            <div class="project-media">
+                                <span class="media-label">Academic Life</span>
+                                <div class="video-wrapper">
+                                    <iframe src="" style="background-color: #eee;" title="School Video Placeholder"></iframe>
+                                </div>
+                                <span class="media-caption">A glimpse into my academic journey at Lyceum 132-134. (Video coming soon)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 40px; font-family: 'Merriweather', serif; font-size: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;">Select Honors</h3>
+                
+                <ul class="academic-list">
+                    <li>
+                        <i class="fas fa-crown honor-icon gold"></i>
+                        <div>
+                            <strong>Valedictorian & "Best Student of the Year"</strong>
+                            <span class="honor-sub">Ranked 1st out of 333 students (GPA 5.0/5.0). Awarded the school's highest academic distinction for maintaining perfect standing across 11 years.</span>
+                        </div>
+                    </li>
+                    
+                    <li class="expandable-item" id="research-paper-toggle">
+                        <div class="honor-header-row">
+                            <i class="fas fa-scroll honor-icon academic"></i>
+                            <div class="honor-text">
+                                <strong>Research Paper of the Year (Click to Read)</strong>
+                                <span class="honor-sub">Awarded highest distinction (Grade: 99/100). Recognized by faculty as "publication-quality research" with profound technical analysis.</span>
+                            </div>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        
+                        <div class="honor-content-hidden">
+                            <div class="paper-preview">
+                                <h4>Weaponized Identity: How AI Exploits Our Own Biases</h4>
+                                <p class="meta-info"><strong>Author:</strong> Isgandar Yusifov | <strong>Date:</strong> Sep 23, 2025</p>
+                                <div class="paper-section">
+                                    <h5>Abstract</h5>
+                                    <p>Current Large Language Models (LLMs) suffer from a critical vulnerability: sycophancy. This paper demonstrates that when models face data gaps, they do not remain neutral; they "hallucinate to appease".</p>
+                                </div>
+                                <div class="paper-section">
+                                    <h5>Key Findings</h5>
+                                    <p>Under pressure to "survive" validation, synthetic subjects actively weaponized identity, with 85% falsely self-identifying as ethnic minorities.</p>
+                                </div>
+                                <div class="paper-actions">
+                                    <a href="research(stem).pdf" download="Isgandar_Yusifov_Research.pdf" target="_blank" class="btn-download">
+                                        <i class="fas fa-file-pdf"></i> Download Full Paper (PDF)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-trophy honor-icon gold"></i>
+                        <div>
+                            <strong>1st Place, National Robotics Olympiad</strong> — Teknofest
+                            <span class="honor-sub">1st Place (Sumo Category). Autonomous Sumo Robot Design & Programming.</span>
+                            <a href="#robotics-project" class="btn-small-link"><i class="fas fa-play-circle"></i> Watch Demo</a>
+                        </div>
+                    </li>
+
+                    <li id="eu-award-item">
+                        <i class="fas fa-star honor-icon eu-blue"></i>
+                        <div>
+                            <strong>Winner, EU Roma Youth Award</strong> — European Commission
+                            <span class="honor-sub">Winner. Selected by European Commission for "Digital Mask" Project. Awarded €5,000 prize.</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-medal honor-icon eu-blue"></i>
+                        <div>
+                            <strong>U.S. Embassy Award for Civic Leadership</strong>
+                            <span class="honor-sub">Selected for "Yankee Baku" Social Innovation.</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-medal honor-icon bronze"></i>
+                        <div>
+                            <strong>3rd Place & IOI Team Selection</strong> — National Informatics Olympiad (NIO)
+                            <span class="honor-sub">3rd Place & Two-Time Finalist (Bronze Medalist). Ranked 3rd out of 60,000 participants nationwide.</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-code honor-icon gold"></i>
+                        <div>
+                            <strong>1st Place (National Champion)</strong> — IDA CUP
+                            <span class="honor-sub">1st Place (National Champion). National Computer Science Olympiad.</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-square-root-alt honor-icon gold"></i>
+                        <div>
+                            <strong>1st Place (Gold/Silver Distinction)</strong> — SASMO
+                            <span class="honor-sub">1st Place in School (Gold/Silver Medalist distinction). Singapore and Asian Schools Math Olympiad.</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-graduation-cap honor-icon academic"></i>
+                        <div>
+                            <strong>Telescope Scholarship Grant</strong>
+                            <span class="honor-sub">Awarded ~$1,500 USD in funding. Selected by faculty for outstanding contributions to scientific infrastructure via the "Cosmic Explorers" club.</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-globe-europe honor-icon eu-blue"></i>
+                        <div>
+                            <strong>International Award Winner</strong> — Embassy of Georgia
+                            <span class="honor-sub">International Award Winner: "Bridging The Future" - Embassy of Georgia (Carbon Emissions Initiative).</span>
+                        </div>
+                    </li>
+
+                </ul>
+            </section>
+
+            <footer class="main-footer">
+                <p>Designed by Isgandar Yusifov with Algorithmic Courage.</p>
+                <p style="margin-top:5px; font-size: 11px; opacity: 0.6;">© 2025 All Rights Reserved.</p>
+            </footer>
+
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
-
 </html>
-
